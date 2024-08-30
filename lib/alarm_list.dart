@@ -1,6 +1,8 @@
 import 'dart:developer';
+// import 'dart:io';
 
 import 'package:alaram_poc/cubit/alarm_cubit.dart';
+// import 'package:alarm/alarm.dart';
 // import 'package:alaram_poc/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -98,6 +100,29 @@ class _AlaramListState extends State<AlaramList> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
+          // final date = DateTime(2022, 08, 30, 01, 59, 12);
+          // final alarmSettings = AlarmSettings(
+          //   id: 42,
+          //   dateTime: date,
+          //   assetAudioPath: 'assets/alarm.mp3',
+          //   loopAudio: true,
+          //   vibrate: true,
+          //   volume: 0.8,
+          //   fadeDuration: 3.0,
+          //   notificationTitle: 'This is the title',
+          //   notificationBody: 'This is the body',
+          //   enableNotificationOnKill: Platform.isIOS,
+          // );
+          // await Alarm.set(alarmSettings: alarmSettings);
+          // ScaffoldMessenger.of(context).showSnackBar(
+          //   SnackBar(
+          //     content: SizedBox(
+          //         height: 100,
+          //         child: Center(
+          //           child: Text("Alaram set for ${date.toString()}"),
+          //         )),
+          //   ),
+          // );
           await _showTimePicker(context);
         },
         child: const Icon(Icons.add),
